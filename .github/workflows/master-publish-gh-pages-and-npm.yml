@@ -39,6 +39,7 @@ jobs:
                   # Remove the infra to build the AWS SDK v3 browser script
                   rm -rf aws-sdk-build
             - name: Deploy to npm packages
+                run: env
               uses: JS-DevTools/npm-publish@v1
               with:
                   token: ${{ secrets.NPM_TOKEN }}
