@@ -43,5 +43,5 @@ jobs:
                   rm -rf aws-sdk-build
             - name: Deploy to npm packages
               uses: JS-DevTools/npm-publish@v1
-              env:
+              with:
                   token: '${{ secrets.NPM_TOKEN }}'
