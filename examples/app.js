@@ -622,6 +622,13 @@ fields.forEach(({field, type, name}) => {
     });
 });
 
+// Wait for page to fully load
+$(document).ready(() => {
+    if (urlParams.has('start-viewer-immediately') && urlParams.get('start-viewer-immediately') === 'true') {
+        $('#viewer-button').click();
+    }
+});
+
 /**
  * Determines whether the ICE Candidate should be added.
  * @param formValues Settings used.
